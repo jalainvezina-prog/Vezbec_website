@@ -10,15 +10,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "csstype": "^3.2.3",
     "firebase": "^11.2.0",
     "firebase-admin": "^13.1.0",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^3.0.1",
     "lucide-react": "^0.475.0",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "stripe": "^17.6.0"
+    "stripe": "^17.6.0",
+    "tailwind-merge": "^3.0.1",
+    "undici-types": "^8.12.4"
   },
   "devDependencies": {
     "@types/node": "^22.13.1",
