@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vezbec — Portfolio Solutions No-Code & Low-Code | AppSheet, Glide, Zite</title>
+  <meta name="description" content="Développement sur-mesure d'applications métiers mobiles et web avec Google AppSheet, Glide App et Zite. Numérisez vos processus opérationnels en un temps record.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Vezbec Home">
+        <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Lang Switcher & CTA) -->
+      <div class="nav-actions">
+        <!-- Language Switcher Pill -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="fr" aria-label="Passer en français">FR</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.cta">
+          Lancer un projet
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+      <a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a>
+      <a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Portfolio & Galerie</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.5rem;">
+        <span style="font-size:0.875rem; color:var(--text-secondary);">Langue / Language :</span>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem;" data-i18n="nav.cta">Lancer un projet</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-badge-wrap">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="hero.badge">Expertise AppSheet • Glide • Zite</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-i18n="hero.titlePre">Transformez vos processus avec des</span>
+          <span class="text-gradient" data-i18n="hero.titleHighlight">applications sur-mesure</span>
+          <span data-i18n="hero.titlePost">agiles et performantes.</span>
+        </h1>
+
+        <p class="hero-desc" data-i18n="hero.description">
+          Conception et déploiement ultra-rapides d'applications métiers mobiles et web. Éliminez la saisie manuelle, connectez vos données et offrez à vos équipes des outils sur-mesure sans les coûts d'un développement traditionnel.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="gallery.html" class="btn btn-primary" data-i18n="hero.ctaPrimary">
+            Découvrir nos réalisations
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="contact.html" class="btn btn-secondary" data-i18n="hero.ctaSecondary">
+            Demander une consultation gratuite
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <span class="stars">★★★★★</span>
+          <span data-i18n="hero.badgeRating">Note moyenne 4.9/5 sur plus de 50 déploiements d'entreprise</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Stats Counter Bar -->
+    <div class="container">
+      <section class="stats-bar" aria-label="Chiffres clés">
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="stats.stat1Number">50+</div>
+          <div class="stat-label" data-i18n="stats.stat1Label">Applications d'affaires déployées</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-gradient-cyan" data-i18n="stats.stat2Number">10x</div>
+          <div class="stat-label" data-i18n="stats.stat2Label">Plus rapide qu'un dev traditionnel</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="stats.stat3Number">99.8%</div>
+          <div class="stat-label" data-i18n="stats.stat3Label">Taux de satisfaction client</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-i18n="stats.stat4Number">100%</div>
+          <div class="stat-label" data-i18n="stats.stat4Label">Mobile & Cloud multiplateforme</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Platform Ecosystem Section -->
+    <section class="section" id="platforms">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span data-i18n="platforms.tagline">Écosystème Technologique</span>
+          </span>
+          <h2 class="section-title" data-i18n="platforms.title">Les meilleures plateformes No-Code & Low-Code du marché</h2>
+          <p class="section-subtitle" data-i18n="platforms.subtitle">Nous sélectionnons l'architecture logicielle idéale selon vos flux de travail, vos règles métiers et votre infrastructure existante.</p>
+        </div>
+
+        <div class="platforms-grid">
+          <!-- Platform 1: AppSheet -->
+          <article class="platform-card appsheet">
+            <div class="platform-header">
+              <div class="platform-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="platform-badge badge-appsheet" data-i18n="platforms.appsheet.tag">Opérations & Terrain</span>
+            </div>
+            <h3 class="platform-title" data-i18n="platforms.appsheet.title">Google AppSheet</h3>
+            <div class="platform-subtitle" data-i18n="platforms.appsheet.subtitle">L'écosystème Google Cloud pour les opérations</div>
+            <p class="platform-desc" data-i18n="platforms.appsheet.desc">
+              Idéal pour les équipes de terrain, la maintenance (GMAO), les audits et la gestion d'inventaire. Fonctionne hors-ligne (offline-first) avec synchronisation Google Sheets, SQL et BigQuery.
+            </p>
+            <ul class="platform-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.appsheet.feature1">Mode 100% hors-ligne avec synchronisation automatique</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.appsheet.feature2">Scan codes-barres, QR codes et géolocalisation GPS</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.appsheet.feature3">Génération automatique de rapports PDF & emails</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <a href="gallery.html?platform=appsheet" class="btn btn-outline-cyan" style="width:100%;">
+                Voir projets AppSheet
+              </a>
+            </div>
+          </article>
+
+          <!-- Platform 2: Glide App -->
+          <article class="platform-card glide">
+            <div class="platform-header">
+              <div class="platform-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="platform-badge badge-glide" data-i18n="platforms.glide.tag">Portails & Expérience Utilisateur</span>
+            </div>
+            <h3 class="platform-title" data-i18n="platforms.glide.title">Glide App</h3>
+            <div class="platform-subtitle" data-i18n="platforms.glide.subtitle">Design moderne et portails intuitifs</div>
+            <p class="platform-desc" data-i18n="platforms.glide.desc">
+              Parfait pour les portails clients, CRM commerciaux, annuaires RH et applications événementielles. Interface utilisateur haut de gamme avec intégration Airtable, Excel et API.
+            </p>
+            <ul class="platform-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.glide.feature1">Design ultra-léché optimisé pour mobile et tablette</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.glide.feature2">Gestion granulaire des rôles et accès utilisateurs</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.glide.feature3">Synchronisation instantanée avec Airtable et bases SQL</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <a href="gallery.html?platform=glide" class="btn btn-secondary" style="width:100%; border-color: rgba(129, 140, 248, 0.4); color: var(--color-glide);">
+                Voir projets Glide
+              </a>
+            </div>
+          </article>
+
+          <!-- Platform 3: Zite -->
+          <article class="platform-card zite">
+            <div class="platform-header">
+              <div class="platform-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:28px;height:28px;">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="platform-badge badge-zite" data-i18n="platforms.zite.tag">Gestion & Tableaux de bord</span>
+            </div>
+            <h3 class="platform-title" data-i18n="platforms.zite.title">Zite</h3>
+            <div class="platform-subtitle" data-i18n="platforms.zite.subtitle">Applications de gestion et portails agiles</div>
+            <p class="platform-desc" data-i18n="platforms.zite.desc">
+              Spécialisé pour la gestion de chantiers, les formulaires complexes, le suivi d'équipements et la collaboration inter-équipes avec tableaux de bord réactifs.
+            </p>
+            <ul class="platform-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.zite.feature1">Suivi de projets et flux de travail dynamiques</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.zite.feature2">Tableaux de bord d'indicateurs clés (KPI) en temps réel</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="platforms.zite.feature3">Règles de validation poussées et automatisations</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <a href="gallery.html?platform=zite" class="btn btn-secondary" style="width:100%; border-color: rgba(16, 185, 129, 0.4); color: var(--color-zite);">
+                Voir projets Zite
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span data-i18n="featured.tagline">Projets Récents</span>
+          </span>
+          <h2 class="section-title" data-i18n="featured.title">Aperçu de nos réalisations phares</h2>
+          <p class="section-subtitle" data-i18n="featured.subtitle">Des solutions concrètes qui génèrent un retour sur investissement immédiat pour nos clients.</p>
+        </div>
+
+        <div class="featured-grid" id="featuredGrid">
+          <!-- Featured 1: AppSheet FieldOps -->
+          <article class="project-card" onclick="openProjectModal('appsheet-fieldops')">
+            <div class="project-card-thumb">
+              <img src="assets/mockups/appsheet-fieldops.svg" alt="AppSheet FieldOps Mockup">
+              <div class="project-card-thumb-overlay">
+                <span class="platform-badge badge-appsheet">Google AppSheet</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-category" data-i18n="platforms.appsheet.tag">Construction & BTP</div>
+              <h3 class="project-card-title">Vezbec FieldOps — Inspection Chantier</h3>
+              <p class="project-card-desc">Application mobile 100% hors-ligne avec fiches d'inspection dynamiques, prise de photos annotées et rapport PDF.</p>
+              <div class="project-tags-list">
+                <span class="project-tag">Google Cloud</span>
+                <span class="project-tag">Offline-First</span>
+                <span class="project-tag">PDF Auto</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="card-link-btn" data-i18n="featured.viewDetails">
+                  Voir la fiche projet
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured 2: Glide TalentPortal -->
+          <article class="project-card" onclick="openProjectModal('glide-talentportal')">
+            <div class="project-card-thumb">
+              <img src="assets/mockups/glide-talentportal.svg" alt="Glide TalentPortal Mockup">
+              <div class="project-card-thumb-overlay">
+                <span class="platform-badge badge-glide">Glide App</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-category">Ressources Humaines</div>
+              <h3 class="project-card-title">TalentPortal HR — Onboarding Collaborateur</h3>
+              <p class="project-card-desc">Portail employé moderne avec annuaire d'équipe visuel, demandes de congés et parcours d'accueil interactif.</p>
+              <div class="project-tags-list">
+                <span class="project-tag">Glide Tables</span>
+                <span class="project-tag">Airtable</span>
+                <span class="project-tag">Slack Sync</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="card-link-btn" data-i18n="featured.viewDetails">
+                  Voir la fiche projet
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured 3: Zite ClientPortal -->
+          <article class="project-card" onclick="openProjectModal('zite-clientportal')">
+            <div class="project-card-thumb">
+              <img src="assets/mockups/zite-clientportal.svg" alt="Zite ClientPortal Mockup">
+              <div class="project-card-thumb-overlay">
+                <span class="platform-badge badge-zite">Zite</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-category">Ingénierie & Bâtiment</div>
+              <h3 class="project-card-title">Zite ClientPortal — Extranet Suivi de Mandats</h3>
+              <p class="project-card-desc">Extranet client sécurisé pour la validation de plans techniques, l'approbation d'avenants et le suivi budgétaire.</p>
+              <div class="project-tags-list">
+                <span class="project-tag">Zite Platform</span>
+                <span class="project-tag">S3 Storage</span>
+                <span class="project-tag">Stripe</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="card-link-btn" data-i18n="featured.viewDetails">
+                  Voir la fiche projet
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="gallery.html" class="btn btn-primary" data-i18n="featured.viewAllGallery">
+            Explorer toute la galerie (9 projets)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Low-Code Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            <span data-i18n="whyLowCode.tagline">Pourquoi le Low-Code ?</span>
+          </span>
+          <h2 class="section-title" data-i18n="whyLowCode.title">L'agilité d'une startup, la robustesse de l'entreprise</h2>
+          <p class="section-subtitle" data-i18n="whyLowCode.subtitle">Découvrez pourquoi les PME et grandes entreprises migrent leurs outils internes vers des architectures no-code modernes.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <h3 class="why-title" data-i18n="whyLowCode.item1Title">Déploiement en quelques semaines</h3>
+              <p class="why-desc" data-i18n="whyLowCode.item1Desc">Là où un développement logiciel classique nécessite 6 à 12 mois, nos applications sont opérationnelles et testées en 2 à 4 semaines.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div>
+              <h3 class="why-title" data-i18n="whyLowCode.item2Title">Réduction des coûts de 60 à 80%</h3>
+              <p class="why-desc" data-i18n="whyLowCode.item2Desc">Investissez dans la valeur métier plutôt que dans la maintenance d'infrastructures lourdes et de code serveur obsolète.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+            </div>
+            <div>
+              <h3 class="why-title" data-i18n="whyLowCode.item3Title">Évolution continue sans dette technique</h3>
+              <p class="why-desc" data-i18n="whyLowCode.item3Desc">Vos processus changent ? Nous ajustons les champs, automatisations et règles en quelques minutes sans réécrire l'application.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <div>
+              <h3 class="why-title" data-i18n="whyLowCode.item4Title">Sécurité & Conformité de niveau cloud</h3>
+              <p class="why-desc" data-i18n="whyLowCode.item4Desc">Bénéficiez de la sécurité des géants technologiques (Google Cloud, AWS, Microsoft) avec chiffrement de bout en bout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Process -->
+    <section class="section" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span data-i18n="process.tagline">Méthodologie</span>
+          </span>
+          <h2 class="section-title" data-i18n="process.title">Du besoin opérationnel à l'application déployée</h2>
+          <p class="section-subtitle" data-i18n="process.subtitle">Un accompagnement structuré, transparent et orienté résultats à chaque étape.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="step-number" data-i18n="process.step1Num">01</div>
+            <h3 class="step-title" data-i18n="process.step1Title">Cadrage & Modélisation</h3>
+            <p class="step-desc" data-i18n="process.step1Desc">Analyse de vos processus actuels, cartographie des données (Sheets, Airtable, SQL) et définition des parcours utilisateurs clés.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number" data-i18n="process.step2Num">02</div>
+            <h3 class="step-title" data-i18n="process.step2Title">Prototypage Interactif</h3>
+            <p class="step-desc" data-i18n="process.step2Desc">Création d'un prototype navigable en moins de 5 jours ouvrés pour valider l'ergonomie avec vos équipes.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number" data-i18n="process.step3Num">03</div>
+            <h3 class="step-title" data-i18n="process.step3Title">Développement & Intégration</h3>
+            <p class="step-desc" data-i18n="process.step3Desc">Configuration des règles d'affaires, automatisations (emails, PDF, webhooks), rôles d'accès et tests de robustesse.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number" data-i18n="process.step4Num">04</div>
+            <h3 class="step-title" data-i18n="process.step4Title">Déploiement & Formation</h3>
+            <p class="step-desc" data-i18n="process.step4Desc">Mise en production, accompagnement au changement, formation vidéo de vos collaborateurs et support technique dédié.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span data-i18n="testimonials.tagline">Témoignages</span>
+          </span>
+          <h2 class="section-title" data-i18n="testimonials.title">Ce que disent nos clients</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote" data-i18n="testimonials.item1Quote">« L'application AppSheet conçue par Vezbec a éliminé 15 heures de saisie papier hebdomadaire pour nos inspecteurs sur les chantiers. Un vrai tournant ! »</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MB</div>
+              <div>
+                <div class="author-name" data-i18n="testimonials.item1Author">Marc-André B.</div>
+                <div class="author-role" data-i18n="testimonials.item1Role">Directeur des Opérations, Construction Nordik</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote" data-i18n="testimonials.item2Quote">« Notre portail client Glide est devenu notre meilleur argument de vente. Nos clients adorent suivre l'avancement de leurs dossiers en direct. »</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #818CF8, #EC4899);">ST</div>
+              <div>
+                <div class="author-name" data-i18n="testimonials.item2Author">Sophie Tremblay</div>
+                <div class="author-role" data-i18n="testimonials.item2Role">Fondatrice, LogiLogix Solutions</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote" data-i18n="testimonials.item3Quote">« Une réactivité exemplaire. L'application Zite a été livrée avec 1 semaine d'avance et s'est intégrée sans accroc à nos outils existants. »</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4);">JP</div>
+              <div>
+                <div class="author-name" data-i18n="testimonials.item3Author">Jean-Philippe R.</div>
+                <div class="author-role" data-i18n="testimonials.item3Role">VP Technologies, Groupe Industriel Québec</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global CTA Banner -->
+    <div class="container" style="margin-bottom: 2rem;">
+      <section class="cta-banner">
+        <h2 class="cta-title" data-i18n="ctaBanner.title">Prêt à propulser vos opérations au niveau supérieur ?</h2>
+        <p class="cta-subtitle" data-i18n="ctaBanner.subtitle">Planifiez une démonstration personnalisée ou soumettez votre cahier des charges.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary" data-i18n="ctaBanner.btnPrimary">
+            Démarrer un projet
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="gallery.html" class="btn btn-secondary" data-i18n="ctaBanner.btnSecondary">
+            Consulter la galerie d'applications
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Interactive Project Details Modal -->
+  <div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer la boîte de dialogue">
+        <svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-preview-wrap">
+        <img id="modalPreviewImg" src="" alt="Aperçu de l'application">
+      </div>
+
+      <div class="modal-content-body">
+        <div>
+          <div class="modal-header-meta">
+            <span id="modalPlatformBadge" class="platform-badge"></span>
+            <span id="modalCategory" class="modal-category"></span>
+          </div>
+          <h2 id="modalTitle" class="modal-title"></h2>
+        </div>
+
+        <p id="modalDesc" class="modal-desc"></p>
+
+        <!-- Features list -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalCoreFeatures">Fonctionnalités Clés</h3>
+          <ul id="modalFeaturesList" class="modal-features-list"></ul>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalBusinessImpact">Impact & Valeur d'Affaires</h3>
+          <div id="modalMetricsGrid" class="modal-metrics-grid"></div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalTechStack">Technologies & Connecteurs</h3>
+          <div id="modalStackTags" class="modal-stack-tags"></div>
+        </div>
+
+        <!-- Target Users -->
+        <div>
+          <h4 style="font-size:0.875rem; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.25rem;" data-i18n="galleryPage.modalTargetUsers">Utilisateurs cibles</h4>
+          <p id="modalTargetUsers" style="font-size:0.9375rem; color:var(--text-secondary);"></p>
+        </div>
+
+        <!-- Modal Footer CTA -->
+        <div class="modal-footer-cta">
+          <button type="button" class="btn btn-secondary" onclick="closeProjectModal()" data-i18n="galleryPage.modalClose">Fermer</button>
+          <button type="button" class="btn btn-primary" id="modalCtaBtn">Commander une solution similaire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" style="height:34px;width:auto;">
+          <p class="footer-brand-desc" data-i18n="footer.desc">
+            Studio d'ingénierie No-Code & Low-Code spécialisé dans l'optimisation des flux d'entreprise avec Google AppSheet, Glide et Zite.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col1Title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact & Soumission</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col2Title">Technologies</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html?platform=appsheet">Google AppSheet</a></li>
+            <li><a href="gallery.html?platform=glide">Glide App</a></li>
+            <li><a href="gallery.html?platform=zite">Zite</a></li>
+            <li><a href="gallery.html">Google Cloud & SQL</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col3Title">Localisation & Contact</h4>
+          <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+            Québec (QC), Canada<br>
+            contact@vezbec.com<br>
+            +1 (581) 700-8432
+          </p>
+          <div class="lang-switcher" style="display:inline-flex;">
+            <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Vezbec. Tous droits réservés. Conçu avec rigueur et passion au Québec.</span>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" data-i18n="footer.privacy">Confidentialité</a>
+          <a href="#" data-i18n="footer.terms">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

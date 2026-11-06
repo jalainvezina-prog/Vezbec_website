@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vezbec — Galerie de Projets No-Code & Low-Code (AppSheet, Glide, Zite)</title>
+  <meta name="description" content="Explorez nos projets et cas d'usage réels d'applications mobiles et web développées avec Google AppSheet, Glide App et Zite.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Vezbec Home">
+        <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="gallery.html" class="nav-link active" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Lang Switcher & CTA) -->
+      <div class="nav-actions">
+        <!-- Language Switcher Pill -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="fr" aria-label="Passer en français">FR</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.cta">
+          Lancer un projet
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="gallery.html" class="nav-link active" data-i18n="nav.gallery">Portfolio & Galerie</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.5rem;">
+        <span style="font-size:0.875rem; color:var(--text-secondary);">Langue / Language :</span>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem;" data-i18n="nav.cta">Lancer un projet</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Gallery Hero Header -->
+    <section class="gallery-hero">
+      <div class="container">
+        <span class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span data-i18n="galleryPage.tagline">Démonstrateur Interactif</span>
+        </span>
+        <h1 class="section-title" data-i18n="galleryPage.title">Galerie des Applications No-Code & Low-Code</h1>
+        <p class="section-subtitle" style="max-width:760px; margin: 0 auto;" data-i18n="galleryPage.subtitle">
+          Explorez nos cas d'usage réels conçus sur AppSheet, Glide et Zite. Filtrez par technologie ou recherchez une fonctionnalité spécifique.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Bar & Search -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="filter-bar-container">
+          <div class="gallery-controls">
+            <!-- Platform Filter Tabs -->
+            <div class="filter-tabs" role="tablist" aria-label="Filtrer les projets">
+              <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true" data-i18n="galleryPage.filterAll">
+                Tous les projets
+              </button>
+              <button type="button" class="filter-tab" data-filter="appsheet" role="tab" aria-selected="false" data-i18n="galleryPage.filterAppSheet">
+                Google AppSheet
+              </button>
+              <button type="button" class="filter-tab" data-filter="glide" role="tab" aria-selected="false" data-i18n="galleryPage.filterGlide">
+                Glide App
+              </button>
+              <button type="button" class="filter-tab" data-filter="zite" role="tab" aria-selected="false" data-i18n="galleryPage.filterZite">
+                Zite
+              </button>
+            </div>
+
+            <!-- Instant Search Box -->
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="text" 
+                id="gallerySearch" 
+                class="search-input" 
+                placeholder="Rechercher une application, un secteur ou un mot-clé..." 
+                data-i18n-placeholder="galleryPage.searchPlaceholder"
+                aria-label="Rechercher un projet"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="gallery-grid" id="projectsGrid">
+          <!-- Populated dynamically by js/gallery.js -->
+        </div>
+
+        <!-- Call to action inside gallery -->
+        <div class="cta-banner" style="margin-top: 2rem;">
+          <h2 class="cta-title" data-i18n="ctaBanner.title">Vous avez un projet similaire en tête ?</h2>
+          <p class="cta-subtitle" data-i18n="ctaBanner.subtitle">Planifiez une démonstration personnalisée ou soumettez votre cahier des charges.</p>
+          <div class="cta-btns">
+            <a href="contact.html" class="btn btn-primary" data-i18n="ctaBanner.btnPrimary">
+              Démarrer un projet
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Project Details Modal -->
+  <div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer la boîte de dialogue">
+        <svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-preview-wrap">
+        <img id="modalPreviewImg" src="" alt="Aperçu de l'application">
+      </div>
+
+      <div class="modal-content-body">
+        <div>
+          <div class="modal-header-meta">
+            <span id="modalPlatformBadge" class="platform-badge"></span>
+            <span id="modalCategory" class="modal-category"></span>
+          </div>
+          <h2 id="modalTitle" class="modal-title"></h2>
+        </div>
+
+        <p id="modalDesc" class="modal-desc"></p>
+
+        <!-- Features list -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalCoreFeatures">Fonctionnalités Clés</h3>
+          <ul id="modalFeaturesList" class="modal-features-list"></ul>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalBusinessImpact">Impact & Valeur d'Affaires</h3>
+          <div id="modalMetricsGrid" class="modal-metrics-grid"></div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div>
+          <h3 class="modal-section-title" data-i18n="galleryPage.modalTechStack">Technologies & Connecteurs</h3>
+          <div id="modalStackTags" class="modal-stack-tags"></div>
+        </div>
+
+        <!-- Target Users -->
+        <div>
+          <h4 style="font-size:0.875rem; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.25rem;" data-i18n="galleryPage.modalTargetUsers">Utilisateurs cibles</h4>
+          <p id="modalTargetUsers" style="font-size:0.9375rem; color:var(--text-secondary);"></p>
+        </div>
+
+        <!-- Modal Footer CTA -->
+        <div class="modal-footer-cta">
+          <button type="button" class="btn btn-secondary" onclick="closeProjectModal()" data-i18n="galleryPage.modalClose">Fermer</button>
+          <button type="button" class="btn btn-primary" id="modalCtaBtn">Commander une solution similaire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" style="height:34px;width:auto;">
+          <p class="footer-brand-desc" data-i18n="footer.desc">
+            Studio d'ingénierie No-Code & Low-Code spécialisé dans l'optimisation des flux d'entreprise avec Google AppSheet, Glide et Zite.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col1Title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact & Soumission</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col2Title">Technologies</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html?platform=appsheet">Google AppSheet</a></li>
+            <li><a href="gallery.html?platform=glide">Glide App</a></li>
+            <li><a href="gallery.html?platform=zite">Zite</a></li>
+            <li><a href="gallery.html">Google Cloud & SQL</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col3Title">Localisation & Contact</h4>
+          <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+            Québec (QC), Canada<br>
+            contact@vezbec.com<br>
+            +1 (581) 700-8432
+          </p>
+          <div class="lang-switcher" style="display:inline-flex;">
+            <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Vezbec. Tous droits réservés. Conçu avec rigueur et passion au Québec.</span>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" data-i18n="footer.privacy">Confidentialité</a>
+          <a href="#" data-i18n="footer.terms">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
+

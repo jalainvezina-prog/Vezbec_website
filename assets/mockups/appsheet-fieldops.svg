@@ -1,0 +1,84 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </linearGradient>
+    <linearGradient id="cyanG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="glowC" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Background Canvas -->
+  <rect width="800" height="500" rx="16" fill="url(#bg)"/>
+  <rect width="800" height="500" rx="16" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- App Header / Toolbar -->
+  <rect x="30" y="25" width="740" height="60" rx="12" fill="#1E293B" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="55" r="8" fill="#38BDF8"/>
+  <text x="80" y="60" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="700">FieldOps — Inspection Chantier #8942</text>
+  <rect x="540" y="43" width="95" height="24" rx="6" fill="#0284C7" fill-opacity="0.3" stroke="#38BDF8" stroke-width="1"/>
+  <text x="555" y="59" fill="#38BDF8" font-family="Inter, sans-serif" font-size="11" font-weight="600">OFFLINE READY</text>
+  <rect x="650" y="43" width="100" height="24" rx="6" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <text x="662" y="59" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="600">SYNC READY</text>
+
+  <!-- Left Column: Inspection Protocol Checklist -->
+  <rect x="30" y="105" width="440" height="365" rx="12" fill="#1E293B" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
+  <text x="50" y="135" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="600">ÉTAPES D'AUDIT SÉCURITÉ (4/5)</text>
+
+  <!-- Item 1: Checked -->
+  <rect x="50" y="150" width="400" height="50" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <circle cx="75" cy="175" r="10" fill="#10B981"/>
+  <path d="M71 175L74 178L80 172" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="95" y="173" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="600">1. Échafaudages & Harnais certifiés</text>
+  <text x="95" y="188" fill="#10B981" font-family="Inter, sans-serif" font-size="11">Conforme • Inspecté à 08:34</text>
+
+  <!-- Item 2: Checked -->
+  <rect x="50" y="210" width="400" height="50" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <circle cx="75" cy="235" r="10" fill="#10B981"/>
+  <path d="M71 235L74 238L80 232" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="95" y="233" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="600">2. Tableau électrique de secours</text>
+  <text x="95" y="248" fill="#10B981" font-family="Inter, sans-serif" font-size="11">Disjoncteur différentiel vérifié</text>
+
+  <!-- Item 3: Alert / Action Required -->
+  <rect x="50" y="270" width="400" height="50" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="75" cy="295" r="10" fill="#F59E0B"/>
+  <text x="72" y="299" fill="#000" font-family="Inter, sans-serif" font-size="12" font-weight="800">!</text>
+  <text x="95" y="293" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="600">3. Extincteurs CO2 Zone B</text>
+  <text x="95" y="308" fill="#F59E0B" font-family="Inter, sans-serif" font-size="11">Date limite dépassée • Photo requise</text>
+
+  <!-- Item 4: Checked -->
+  <rect x="50" y="330" width="400" height="50" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+  <circle cx="75" cy="355" r="10" fill="#10B981"/>
+  <path d="M71 355L74 358L80 352" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="95" y="353" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="600">4. Issue de secours dégagée</text>
+  <text x="95" y="368" fill="#10B981" font-family="Inter, sans-serif" font-size="11">Balancement conforme</text>
+
+  <!-- Progress Bar at Bottom of Left Card -->
+  <rect x="50" y="410" width="400" height="8" rx="4" fill="#0F172A"/>
+  <rect x="50" y="410" width="320" height="8" rx="4" fill="url(#cyanG)"/>
+  <text x="50" y="440" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Progression de la ronde : 80% complétée</text>
+
+  <!-- Right Column: Evidence Photo & Signature Pad -->
+  <rect x="490" y="105" width="280" height="185" rx="12" fill="#1E293B" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="132" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="600">PREUVE PHOTO ANNOTÉE</text>
+  <!-- Mini camera view / photo preview -->
+  <rect x="510" y="145" width="240" height="105" rx="8" fill="#0B132B" stroke="#38BDF8" stroke-dasharray="4 4" stroke-width="1"/>
+  <circle cx="630" cy="185" r="24" fill="#1E293B"/>
+  <path d="M620 185H640M630 175V195" stroke="#38BDF8" stroke-width="2"/>
+  <rect x="520" y="215" width="120" height="22" rx="4" fill="#0284C7" fill-opacity="0.8"/>
+  <text x="528" y="230" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="600">GPS : 46.8139° N</text>
+
+  <!-- Digital Signature Box -->
+  <rect x="490" y="305" width="280" height="165" rx="12" fill="#1E293B" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
+  <text x="510" y="330" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" font-weight="600">SIGNATURE DU SUPERVISEUR</text>
+  <rect x="510" y="342" width="240" height="70" rx="8" fill="#0B0F19" stroke="#334155" stroke-width="1"/>
+  <!-- Simulated signature stroke -->
+  <path d="M530 385 Q560 350 580 375 T640 365 T710 375" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" filter="url(#glowC)"/>
+  <rect x="510" y="422" width="240" height="36" rx="8" fill="url(#cyanG)"/>
+  <text x="560" y="445" fill="#04101A" font-family="Inter, sans-serif" font-size="12" font-weight="700">GÉNÉRER LE RAPPORT PDF</text>
+</svg>

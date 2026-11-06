@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vezbec — Contact & Estimation de Projet No-Code | AppSheet, Glide, Zite</title>
+  <meta name="description" content="Contactez Vezbec pour estimer votre projet d'application d'entreprise avec Google AppSheet, Glide App ou Zite. Réponse sous 24h ouvrées.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Vezbec Home">
+        <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+          <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Lang Switcher & CTA) -->
+      <div class="nav-actions">
+        <!-- Language Switcher Pill -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="fr" aria-label="Passer en français">FR</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.cta">
+          Lancer un projet
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Portfolio & Galerie</a>
+      <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.5rem;">
+        <span style="font-size:0.875rem; color:var(--text-secondary);">Langue / Language :</span>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem;" data-i18n="nav.cta">Lancer un projet</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero Header -->
+    <section class="gallery-hero">
+      <div class="container">
+        <span class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span data-i18n="contactPage.tagline">Démarrons Votre Projet</span>
+        </span>
+        <h1 class="section-title" data-i18n="contactPage.title">Parlons de votre prochaine application</h1>
+        <p class="section-subtitle" style="max-width:760px; margin: 0 auto;" data-i18n="contactPage.subtitle">
+          Remplissez ce formulaire détaillé pour obtenir une estimation budgétaire et un délai de livraison sous 24 à 48 heures.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Layout (Channels + Form) -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left Column: Contact Channels -->
+          <div class="contact-info-card">
+            <div>
+              <h2 class="contact-info-title" data-i18n="contactPage.infoTitle">Coordonnées directes</h2>
+              <p class="contact-info-desc" data-i18n="contactPage.infoDesc">
+                Vous avez une question urgente ou souhaitez échanger directement avec notre expert technique ?
+              </p>
+            </div>
+
+            <div class="contact-channels-list">
+              <!-- Email Item -->
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-label" data-i18n="contactPage.emailLabel">Courriel direct</div>
+                  <a href="mailto:contact@vezbec.com" class="channel-value" data-i18n="contactPage.emailValue">contact@vezbec.com</a>
+                </div>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-label" data-i18n="contactPage.phoneLabel">Téléphone direct</div>
+                  <a href="tel:+15817008432" class="channel-value" data-i18n="contactPage.phoneValue">+1 (581) 700-8432</a>
+                </div>
+              </div>
+
+              <!-- Location Item -->
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-label" data-i18n="contactPage.locLabel">Emplacement</div>
+                  <div class="channel-value" data-i18n="contactPage.locValue">Québec (QC), Canada • Déploiements internationaux à distance</div>
+                </div>
+              </div>
+
+              <!-- Hours Item -->
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-label" data-i18n="contactPage.hoursLabel">Disponibilité</div>
+                  <div class="channel-value" data-i18n="contactPage.hoursValue">Lundi au Vendredi : 8h30 - 17h30 (HNE)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust Badge Box -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem;">
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem; color: var(--accent-emerald); font-weight:700; font-size:0.875rem;">
+                <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Confidentialité & Propriété Totale
+              </div>
+              <p style="font-size:0.8125rem; color:var(--text-secondary); line-height:1.5;">
+                Toutes vos données restent dans votre propre infrastructure infonuagique. Accord de confidentialité signé avant tout démarrage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="contact-form-card">
+            <h2 class="form-title" data-i18n="contactPage.formTitle">Formulaire d'estimation de projet</h2>
+
+            <form id="projectContactForm" novalidate>
+              <div class="form-grid">
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="clientName" class="form-label" data-i18n="contactPage.fieldName">Nom complet *</label>
+                  <input 
+                    type="text" 
+                    id="clientName" 
+                    class="form-control" 
+                    required 
+                    placeholder="ex. Marc-André Tremblay" 
+                    data-i18n-placeholder="contactPage.placeholderName"
+                  >
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="clientEmail" class="form-label" data-i18n="contactPage.fieldEmail">Courriel professionnel *</label>
+                  <input 
+                    type="email" 
+                    id="clientEmail" 
+                    class="form-control" 
+                    required 
+                    placeholder="ex. ma.tremblay@entreprise.ca" 
+                    data-i18n-placeholder="contactPage.placeholderEmail"
+                  >
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="clientPhone" class="form-label" data-i18n="contactPage.fieldPhone">Téléphone</label>
+                  <input 
+                    type="tel" 
+                    id="clientPhone" 
+                    class="form-control" 
+                    placeholder="ex. +1 (418) 555-0199" 
+                    data-i18n-placeholder="contactPage.placeholderPhone"
+                  >
+                </div>
+
+                <!-- Company -->
+                <div class="form-group">
+                  <label for="clientCompany" class="form-label" data-i18n="contactPage.fieldCompany">Entreprise ou Organisation</label>
+                  <input 
+                    type="text" 
+                    id="clientCompany" 
+                    class="form-control" 
+                    placeholder="ex. Tremblay & Associés Inc." 
+                    data-i18n-placeholder="contactPage.placeholderCompany"
+                  >
+                </div>
+
+                <!-- Target Platform -->
+                <div class="form-group">
+                  <label for="clientPlatform" class="form-label" data-i18n="contactPage.fieldPlatform">Plateforme pressentie *</label>
+                  <select id="clientPlatform" class="form-control" required>
+                    <option value="" disabled selected data-i18n="contactPage.platformOptionPrompt">Sélectionnez une plateforme...</option>
+                    <option value="appsheet" data-i18n="contactPage.platformOptionAppSheet">Google AppSheet (Terrain, Formulaires, Hors-ligne)</option>
+                    <option value="glide" data-i18n="contactPage.platformOptionGlide">Glide App (Portail client, CRM mobile, RH)</option>
+                    <option value="zite" data-i18n="contactPage.platformOptionZite">Zite (Gestion de chantier, Tableaux de bord)</option>
+                    <option value="unsure" data-i18n="contactPage.platformOptionUnsure">Je ne sais pas encore / Conseillez-moi</option>
+                  </select>
+                </div>
+
+                <!-- Budget Range -->
+                <div class="form-group">
+                  <label for="clientBudget" class="form-label" data-i18n="contactPage.fieldBudget">Budget approximatif envisagé *</label>
+                  <select id="clientBudget" class="form-control" required>
+                    <option value="" disabled selected data-i18n="contactPage.budgetOptionPrompt">Sélectionnez une fourchette...</option>
+                    <option value="budget1" data-i18n="contactPage.budget1">Moins de 2 500 $ CAD (POC / Prototype rapide)</option>
+                    <option value="budget2" data-i18n="contactPage.budget2">2 500 $ à 5 000 $ CAD (Application métier ciblée)</option>
+                    <option value="budget3" data-i18n="contactPage.budget3">5 000 $ à 10 000 $ CAD (Système complet multi-rôles)</option>
+                    <option value="budget4" data-i18n="contactPage.budget4">Plus de 10 000 $ CAD (Écosystème d'entreprise & ERP)</option>
+                  </select>
+                </div>
+
+                <!-- Timeline -->
+                <div class="form-group full-width">
+                  <label for="clientTimeline" class="form-label" data-i18n="contactPage.fieldTimeline">Délai de déploiement souhaité</label>
+                  <select id="clientTimeline" class="form-control">
+                    <option value="" disabled selected data-i18n="contactPage.timelinePrompt">Sélectionnez un délai...</option>
+                    <option value="urgent" data-i18n="contactPage.timelineUrgent">Urgent (moins de 2 semaines)</option>
+                    <option value="standard" data-i18n="contactPage.timelineStandard">1 mois (idéal pour la plupart des projets)</option>
+                    <option value="flexible" data-i18n="contactPage.timelineFlexible">1 à 3 mois (en cours de cadrage)</option>
+                  </select>
+                </div>
+
+                <!-- Requirements & Details -->
+                <div class="form-group full-width">
+                  <label for="clientMessage" class="form-label" data-i18n="contactPage.fieldMessage">Description de votre besoin opérationnel *</label>
+                  <textarea 
+                    id="clientMessage" 
+                    class="form-control" 
+                    required 
+                    rows="4" 
+                    placeholder="Décrivez les tâches manuelles à automatiser, les utilisateurs concernés et les sources de données existantes (Google Sheets, Excel, SQL)..." 
+                    data-i18n-placeholder="contactPage.placeholderMessage"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%; padding:0.85rem 1.5rem; font-size:1rem;" data-i18n="contactPage.btnSubmit">
+                Transmettre ma demande de projet
+              </button>
+
+              <div class="form-guarantee">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span data-i18n="contactPage.guaranteeText">Réponse garantie sous 24h ouvrées. Accord de confidentialité (NDA) disponible sur demande.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+          <div class="section-header" style="margin-bottom: 2.5rem;">
+            <h2 class="section-title" data-i18n="contactPage.faqTitle">Foire Aux Questions (FAQ)</h2>
+            <p class="section-subtitle" data-i18n="contactPage.faqSubtitle">Tout ce que vous devez savoir avant de lancer votre projet No-Code.</p>
+          </div>
+
+          <div class="faq-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger">
+                <span data-i18n="contactPage.faq1Q">Combien de temps faut-il pour créer une application fonctionnelle ?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner" data-i18n="contactPage.faq1A">
+                  La plupart de nos applications sont livrées entre 2 et 4 semaines. Un prototype interactif (POC) est généralement testable dès la fin de la première semaine.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger">
+                <span data-i18n="contactPage.faq2Q">Les applications fonctionnent-elles sur iPhone, Android et ordinateurs de bureau ?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner" data-i18n="contactPage.faq2A">
+                  Oui, à 100%. AppSheet, Glide et Zite sont 'responsive' et multiplateformes. Elles s'installent en tant qu'applications mobiles natives ou PWA (Progressive Web App) et s'utilisent également dans tout navigateur web moderne.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger">
+                <span data-i18n="contactPage.faq3Q">Mes données restent-elles ma propriété et sont-elles sécurisées ?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner" data-i18n="contactPage.faq3A">
+                  Absolument. Vos données restent hébergées dans votre propre environnement infonuagique (votre compte Google Workspace, Microsoft 365, Airtable ou serveur SQL). Nous ne stockons aucune de vos données métier.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger">
+                <span data-i18n="contactPage.faq4Q">Une connexion Internet est-elle obligatoire sur le terrain ?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner" data-i18n="contactPage.faq4A">
+                  Avec Google AppSheet, vos techniciens peuvent travailler 100% hors-ligne (en sous-sol, en forêt ou sur chantiers isolés). Les données, photos et signatures sont enregistrées localement et se synchronisent automatiquement dès le retour du réseau.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-trigger">
+                <span data-i18n="contactPage.faq5Q">Pourrai-je modifier l'application moi-même après la livraison ?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner" data-i18n="contactPage.faq5A">
+                  Tout à fait ! Nous offrons une session de formation complète et de la documentation vidéo. La force du No-Code est justement de vous libérer de la dépendance technique pour les ajustements quotidiens.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/icons/vezbec-logo.svg" alt="Vezbec Logo" style="height:34px;width:auto;">
+          <p class="footer-brand-desc" data-i18n="footer.desc">
+            Studio d'ingénierie No-Code & Low-Code spécialisé dans l'optimisation des flux d'entreprise avec Google AppSheet, Glide et Zite.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col1Title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Portfolio & Galerie</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact & Soumission</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col2Title">Technologies</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html?platform=appsheet">Google AppSheet</a></li>
+            <li><a href="gallery.html?platform=glide">Glide App</a></li>
+            <li><a href="gallery.html?platform=zite">Zite</a></li>
+            <li><a href="gallery.html">Google Cloud & SQL</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col3Title">Localisation & Contact</h4>
+          <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+            Québec (QC), Canada<br>
+            contact@vezbec.com<br>
+            +1 (581) 700-8432
+          </p>
+          <div class="lang-switcher" style="display:inline-flex;">
+            <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Vezbec. Tous droits réservés. Conçu avec rigueur et passion au Québec.</span>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" data-i18n="footer.privacy">Confidentialité</a>
+          <a href="#" data-i18n="footer.terms">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+

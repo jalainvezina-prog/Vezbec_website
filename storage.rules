@@ -1,0 +1,37 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function estAuthentifie() {
+      return request.auth != null;
+    }
+
+    function estGestionnaire() {
+      return estAuthentifie() && 
+        firestore.get(/databases/(default)/documents/utilisateurs/$(request.auth.uid)).data.role == 'gestion';
+    }
+
+    // Répertoire des baux légaux (Lecture par le locataire concerné ou la gestion)
+    match /baux/{fichier} {
+      allow read: if estAuthentifie();
+      allow write: if estGestionnaire();
+    }
+
+    // Répertoire des photos de tickets (Téléversement sécurisé < 5 Mo)
+    match /tickets/{userId}/{fichier} {
+      allow read: if estAuthentifie();
+      allow create: if estAuthentifie() 
+                    && request.auth.uid == userId
+                    && request.resource.size < 5 * 1024 * 1024
+                    && request.resource.contentType.matches('image/(jpeg|png|webp)');
+      allow update, delete: if estGestionnaire();
+    }
+
+    // Photos publiques des condos (Catalogue pour SEO)
+    match /condos/{fichier} {
+      allow read: if true;
+      allow write: if estGestionnaire();
+    }
+  }
+}
+

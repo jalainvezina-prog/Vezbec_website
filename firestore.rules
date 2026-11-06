@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // FONCTIONS D'ASSISTANCE & SÉCURITÉ
+    // ===============================================================
+
+    function estAuthentifie() {
+      return request.auth != null;
+    }
+
+    function estProprietaire(userId) {
+      return estAuthentifie() && request.auth.uid == userId;
+    }
+
+    function getUtilisateur() {
+      return get(/databases/$(database)/documents/utilisateurs/$(request.auth.uid)).data;
+    }
+
+    function aRole(roleRequis) {
+      return estAuthentifie() && getUtilisateur().role == roleRequis;
+    }
+
+    function estGestionnaire() {
+      return aRole('gestion');
+    }
+
+    function estTechnicien() {
+      return aRole('maintenance') || aRole('gestion');
+    }
+
+    function estLocataire() {
+      return aRole('locataire');
+    }
+
+    // ===============================================================
+    // COLLECTION : CONDOS (Catalogue & Données d'unités)
+    // ===============================================================
+    match /condos/{condoId} {
+      allow read: if (resource.data.statut == 'disponible') || estAuthentifie();
+      allow write: if estGestionnaire();
+    }
+
+    // ===============================================================
+    // COLLECTION : UTILISATEURS
+    // ===============================================================
+    match /utilisateurs/{userId} {
+      allow read: if estProprietaire(userId) || estGestionnaire();
+      allow create: if estProprietaire(userId) && request.resource.data.role in ['locataire', 'maintenance'];
+      allow update: if estProprietaire(userId) 
+                    && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'stripeCustomerId', 'condoAssigneId'])
+                    || estGestionnaire();
+      allow delete: if estGestionnaire();
+    }
+
+    // ===============================================================
+    // COLLECTION : CONTRATS & SOUS-COLLECTION PAIEMENTS
+    // ===============================================================
+    match /contrats/{contratId} {
+      allow read: if (estAuthentifie() && resource.data.locataireId == request.auth.uid) || estGestionnaire();
+      allow write: if estGestionnaire();
+
+      match /paiements/{paiementId} {
+        allow read: if (estAuthentifie() && get(/databases/$(database)/documents/contrats/$(contratId)).data.locataireId == request.auth.uid)
+                    || estGestionnaire();
+        allow create, update, delete: if estGestionnaire();
+      }
+    }
+
+    // ===============================================================
+    // COLLECTION : TICKETS (Requêtes de bris / Incidents)
+    // ===============================================================
+    match /tickets/{ticketId} {
+      allow read: if (estAuthentifie() && resource.data.locataireId == request.auth.uid) || estTechnicien();
+      allow create: if estLocataire() 
+                    && request.resource.data.locataireId == request.auth.uid
+                    && request.resource.data.statut == 'ouvert';
+      allow update: if (estLocataire() && resource.data.locataireId == request.auth.uid && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['statut', 'assigneA', 'commentairesInternes']))
+                    || estTechnicien();
+      allow delete: if estGestionnaire();
+    }
+  }
+}
+
